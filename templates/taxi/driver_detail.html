@@ -3,8 +3,8 @@
 {% block content %}
   <h1>Information about {{ driver.first_name }} {{ driver.last_name }}</h1>
   <ul>
-    {% for author in driver.cars.all %}
-      <li>{{ author.model }}</li>
+    {% for car in driver.cars.all %}
+      <li>{{ car.model }}</li>
       {% empty %}
       <li>No drivers for this vehicle</li>
     {% endfor %}
